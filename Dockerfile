@@ -1,13 +1,8 @@
-FROM php:8.0.0rc1-fpm
+# Utiliza una imagen base de servidor web (nginx o apache)
+FROM nginx:alpine
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y git
+# Copia los archivos HTML al directorio web del servidor
+COPY . /usr/share/nginx/html
 
-# Install PHP extensions
-RUN docker-php-ext-install pdo_mysql
-
-# Get latest Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
-# Set working directory
-WORKDIR /var/www
+# Expone el puerto 80 para acceder a la página web
+EXPOSE 80
