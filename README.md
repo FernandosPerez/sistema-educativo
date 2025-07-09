@@ -1,2 +1,2 @@
 # sistema-educativo
-sistema educativo y administrativo
+sistema educativo y administrativo.
