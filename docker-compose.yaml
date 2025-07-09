@@ -3,7 +3,6 @@ services:
     build: .
     ports:
       - "8002:8002"
-      - "443:443"
     volumes:
       - ./public:/var/www/html/
     depends_on:
