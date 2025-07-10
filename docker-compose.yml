@@ -32,7 +32,7 @@ services:
         image: nginx:alpine
         container_name: php-nginx
         ports:
-            - 8000:80
+            - 8008:8008
         volumes:
             - ./:/var/www/boostrap
             - ./nginx/conf.d/:/etc/nginx/conf.d/
