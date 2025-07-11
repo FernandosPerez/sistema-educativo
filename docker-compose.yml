@@ -17,6 +17,7 @@ services:
             - ./conf:/etc/mysql/conf.d:ro
             - persistent:/var/lib/mysql
         networks:
+            - frontend
             - backend
         healthcheck:
             test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
