@@ -47,7 +47,7 @@ RUN mkdir -p /var/log/php \
 
 # Set proper permissions for web directory
 RUN chown -R webuser:www-data /var/www/html \
-    && chmod -R 750 /var/www/html
+    && chmod -R 777 /var/www/html
 
 # Switch to non-root user
 USER webuser
